@@ -17,9 +17,9 @@ namespace Calculadora
             Console.WriteLine("(2) - Subtração");
             Console.WriteLine("(3) - Divisão");
             Console.WriteLine("(4) - Multiplicação");
-            Console.WriteLine("(0) - Para Sair\n");
+            Console.WriteLine("(5) - Para Sair\n");
             Console.Write("Qual operação deseja realizar:  ");
-            int operacao = int.Parse(Console.ReadLine());
+            short operacao = short.Parse(Console.ReadLine());
 
             Console.Clear();
             switch (operacao)
@@ -28,9 +28,8 @@ namespace Calculadora
                 case 2: Subtraction(); break;
                 case 3: Division(); break;
                 case 4: Multiplication(); break;
-                default:
-                    Console.WriteLine("\n--------Calculadora Finalizada--------\n");
-                    break;
+                case 5: System.Environment.Exit(0); break;
+                default: Menu(); break;
             }
         }
 
@@ -38,10 +37,10 @@ namespace Calculadora
         {
             Console.Clear();
             Console.Write("Digite valor 1:  ");
-            double valorOne = double.Parse(Console.ReadLine());
+            float valorOne = float.Parse(Console.ReadLine());
             Console.Write("Digite valor 2:  ");
-            double valorTwo = double.Parse(Console.ReadLine());
-            double resultado = valorOne + valorTwo;
+            float valorTwo = float.Parse(Console.ReadLine());
+            float resultado = valorOne + valorTwo;
 
             Console.WriteLine($"Resultado é:  {resultado}\n");
             Menu();
@@ -51,10 +50,10 @@ namespace Calculadora
         {
             Console.Clear();
             Console.Write("Digite valor 1:  ");
-            double valorOne = double.Parse(Console.ReadLine());
+            float valorOne = float.Parse(Console.ReadLine());
             Console.Write("Digite valor 2:  ");
-            double valorTwo = double.Parse(Console.ReadLine());
-            double resultado = valorOne - valorTwo;
+            float valorTwo = float.Parse(Console.ReadLine());
+            float resultado = valorOne - valorTwo;
 
             Console.WriteLine($"Resultado é:  {resultado}\n");
             Menu();
@@ -64,10 +63,10 @@ namespace Calculadora
         {
             Console.Clear();
             Console.Write("Digite valor 1:  ");
-            double valorOne = double.Parse(Console.ReadLine());
+            float valorOne = float.Parse(Console.ReadLine());
             Console.Write("Digite valor 2:  ");
-            double valorTwo = double.Parse(Console.ReadLine());
-            double resultado = valorOne / valorTwo;
+            float valorTwo = float.Parse(Console.ReadLine());
+            float resultado = valorOne / valorTwo;
 
             Console.WriteLine($"Resultado é:  {resultado}\n");
             Menu();
@@ -77,10 +76,10 @@ namespace Calculadora
         {
             Console.Clear();
             Console.Write("Digite valor 1:  ");
-            double valorOne = double.Parse(Console.ReadLine());
+            float valorOne = float.Parse(Console.ReadLine());
             Console.Write("Digite valor 2:  ");
-            double valorTwo = double.Parse(Console.ReadLine());
-            double resultado = valorOne * valorTwo;
+            float valorTwo = float.Parse(Console.ReadLine());
+            float resultado = valorOne * valorTwo;
 
             Console.WriteLine($"Resultado é:  {resultado}\n");
             Menu();
